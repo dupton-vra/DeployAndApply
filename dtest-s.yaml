@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dtest
+  labels:
+    name: dtest
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      nodePort: 30036
+      name: http
+  selector:
+    name: dtest
