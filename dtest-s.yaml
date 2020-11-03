@@ -9,5 +9,6 @@ spec:
   ports:
     - port: 8080
       nodePort: 31620
+      type: https
   selector:
     app: dtest
