@@ -1,14 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: dtest
+  name: dtest-m
   labels:
-    name: dtest
+    name: dtest-l
 spec:
   type: NodePort
   ports:
     - port: 8080
       nodePort: 31620
-      name: http
   selector:
-    name: dtest
+    app: dtest
