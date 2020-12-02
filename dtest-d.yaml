@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: dtest
-        image: dgupton75/bulletinboard2:2.4
+        image: dgupton75/bulletinboard3:1.0
         ports:
         - containerPort: 8080
 
