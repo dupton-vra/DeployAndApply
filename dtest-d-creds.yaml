@@ -1,0 +1,21 @@
+kind: Deployment
+metadata:
+  name: dtest
+spec:
+  selector:
+    matchLabels:
+      app: dtest
+  replicas: 1 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: dtest
+    spec:
+      containers:
+      - name: dtest
+        image: dgupton75/bulletinboard3:1.4
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: regcred
