@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: dtest
-        image: dgupton75/bulletinboard3:1.4
+        image: dgupton75/bulletinboardsave:1.0
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
