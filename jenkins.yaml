@@ -14,15 +14,18 @@ spec:
     spec:
       containers:
       - name: jenkins
-        image: jenkins/jenkins:lts
+        image: dgupton75/buildserver:1.1
         ports:
           - name: http-port
             containerPort: 8080
           - name: jnlp-port
             containerPort: 50000
         volumeMounts:
-          - name: jenkins-vol
-            mountPath: /var/jenkins_vol
+          - name: dockersock
+            mountPath: "/var/run/docker.sock"
       volumes:
-        - name: jenkins-vol
-          emptyDir: {}
+      - name: dockersock
+        hostPath:
+          path: /var/run/docker.sock
+      imagePullSecrets:
+      - name: regcred
