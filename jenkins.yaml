@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: jenkins
-        image: dgupton75/buildserver:1.1
+        image: dgupton75/buildserver:1.0
         ports:
           - name: http-port
             containerPort: 8080
