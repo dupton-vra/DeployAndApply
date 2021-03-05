@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: dtest
-        image: dgupton75/bulletinboard:1.$$buildVersion
+        image: dgupton75/bulletinboard:1.$${buildVersion}
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
