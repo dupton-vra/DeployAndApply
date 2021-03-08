@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: jenkins
-        image: dgupton75/buildserver:2.0
+        #image: dgupton75/buildserver:2.0
+        image: jenkins:tls
         ports:
           - name: http-port
             containerPort: 8080
