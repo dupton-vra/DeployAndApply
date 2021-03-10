@@ -1,3 +1,9 @@
+#kubectl run -it --rm --image=mysql:5.6 --restart=Never mysql-client -- mysql -h mysql -ppassword
+#create database DTEST1;
+#use DTEST1;
+#CREATE TABLE events (id INT AUTO_INCREMENT PRIMARY KEY, title TEXT, details TEXT, date DATE);
+#INSERT INTO events (id,title, details, date) VALUES (1,'aab','bbc',NOW());
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
