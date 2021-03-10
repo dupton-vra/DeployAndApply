@@ -1,4 +1,4 @@
-apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2 
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
   name: dtest
@@ -16,8 +16,8 @@ spec:
       - name: dtest
         image: dgupton75/bulletinboard:1.$${buildVersion}
         env:
-          -name: SQL_HOST
-           value: $${SQL_HOST}
+          - name: SQL_HOST
+            value: $${SQL_HOST}
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
