@@ -1,5 +1,5 @@
 #PARMS
-#SQL_HOST ip of the sql host container
+#SQL_HOST ip of the kube cluster
 #version verion to build
 rm -rf *
 export SQL_HOST=$SQL_HOST
