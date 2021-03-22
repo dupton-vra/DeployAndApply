@@ -2,28 +2,28 @@
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: mysql
+  name: mysqld
 spec:
   selector:
     matchLabels:
-      app: mysql
+      app: mysqld
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: mysql
+        app: mysqld
     spec:
       containers:
       - image: mysql:5.6
-        name: mysql
+        name: mysqld
         env:
           # Use secret in real usage
         - name: MYSQL_ROOT_PASSWORD
           value: password
         ports:
         - containerPort: 3306
-          name: mysql
+          name: mysqld
         volumeMounts:
         - name: mysql-persistent-storage
           mountPath: /var/lib/mysql
