@@ -17,7 +17,7 @@ spec:
         image: dgupton75/bulletinboard:1.$${buildVersion}
         env:
           - name: SQL_HOST
-            value: $${SQL_HOST}
+            value: $${sqlServiceName}
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
