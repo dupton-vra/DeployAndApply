@@ -1,9 +1,5 @@
-#PARMS
-#SQL_HOST ip of the kube cluster
-#version verion to build
 rm -rf *
-export SQL_HOST=$SQL_HOST
-docker login -u dgupton75 -p Vcdexswzaq1!
+docker login -u $dockerUserName -p $dockerPassword
 git clone  https://github.com/dupton-vra/node-bulletin-board2.git
 cd node-bulletin-board2
 docker build --no-cache --tag bulletinboard:1.$version .
