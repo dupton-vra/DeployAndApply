@@ -18,6 +18,8 @@ spec:
         env:
           - name: SQL_HOST
             value: $${sqlServiceName}
+          - name: NODE_ENV
+            value: development
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
